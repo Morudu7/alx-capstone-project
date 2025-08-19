@@ -20,7 +20,7 @@ function App() {
       </div>
 
       <div>
-        <SearchBar />
+        <SearchBar/>
       </div>
       
     </div>
