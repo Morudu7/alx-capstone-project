@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import NavBar from './components/navBar';
 import SearchBar from './components/SearchBar'
+import FavourateRecipes from './components/FavourateRecipes'
 import './index.css'
 import './App.css'
 
@@ -21,6 +22,7 @@ function App() {
 
       <div>
         <SearchBar/>
+        <FavourateRecipes />
       </div>
       
     </div>
