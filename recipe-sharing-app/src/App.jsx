@@ -1,7 +1,10 @@
 import { useState } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Homepage from './components/Homepage'
 import NavBar from './components/navBar';
-import SearchBar from './components/SearchBar'
-import FavourateRecipes from './components/FavourateRecipes'
+import Recipes from './components/Recipes'
+import About from './components/About'
+import Contacts from './components/Contacts'
 import './index.css'
 import './App.css'
 
@@ -12,17 +15,13 @@ function App() {
         <NavBar />
       </div>
 
-      <div className='text-5xl p-6'>
-        <h1><a style={{color: 'green'}}>HALO</a>food RECIPES</h1>
-      </div>
-
-      <div className='bg-white flex justify-center items-center h-560 w-1/2 mx-auto pt-6 pr-4 pl-4'>
-        <p>Welcome to Halo recipes where we offer the best and healthy recipes for you</p>
-      </div>
-
-      <div>
-        <SearchBar/>
-        <FavourateRecipes />
+        <div>
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="Recipes" element={<Recipes />} />
+          <Route path="/About" element={<About />} />
+          <Route path="/Contacts" element={<Contacts />} />
+        </Routes>
       </div>
       
     </div>

@@ -1,10 +1,25 @@
-<div className="max-w-2xl mx-auto mb-10 pt-6" >
-          <form  className="relative flex items-center shadow-md rounded-full">
-            <input className="w-full py-3 px-6 text-lg text-gray-700 bg-white border-2 border-transparent rounded-full focus:outline-none focus:ring-4 focus:ring-green-300 focus:border-green-500 transition-shadow duration-300"
-            type ="text"
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder="e.g., Arrabiata, Chicken, Beef..."
-            />
-            <button className='search-bar' type='submit' >Search</button>
-          </form>
-        </div>
+import React from "react";
+import SearchBar from './SearchBar'
+import FavourateRecipes from './FavourateRecipes'
+
+const Homepage = () => {
+  return (
+    <div>
+       <div className='text-5xl p-6'>
+        <h1><a style={{color: 'green'}}>HALO</a>food RECIPES</h1>
+      </div>
+
+      <div className='bg-white flex justify-center items-center h-560 w-1/2 mx-auto pt-6 pr-4 pl-4'>
+        <p>Welcome to Halo recipes where we offer the best and healthy recipes for you</p>
+      </div>
+
+      <div>
+        <SearchBar/>
+        <FavourateRecipes />
+      </div>
+
+    </div>
+  );
+}
+
+export default Homepage;

@@ -1,12 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
     return (
         <div className='font-bold'>
           <ul  className='flex gap-4 justify-end'> 
-            <li>About</li>
-            <li>Recipe</li>
-            <li>Contacts</li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/Recipes">Recipes</Link></li>
+            <li><Link to="/About">About</Link></li>
+            <li><Link to="/Contact">Contacts</Link></li>
           </ul>
         </div>
     );
