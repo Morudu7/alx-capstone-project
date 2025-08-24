@@ -1,5 +1,6 @@
 // src/RecipeCard.js
 import React from 'react';
+import { Link } from "react-router-dom";
 
 const RecipeCard = ({ meal }) => {
     return (
