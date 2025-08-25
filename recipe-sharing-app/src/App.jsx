@@ -5,6 +5,7 @@ import NavBar from './components/navBar';
 import Recipes from './components/Recipes'
 import About from './components/About'
 import Contacts from './components/Contacts'
+import Footer from './components/Footer';
 import './index.css'
 import './App.css'
 
@@ -23,7 +24,7 @@ function App() {
           <Route path="/Contacts" element={<Contacts />} />
         </Routes>
       </div>
-      
+      <Footer />
     </div>
   );
 }

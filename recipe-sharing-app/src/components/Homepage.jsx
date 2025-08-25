@@ -29,7 +29,7 @@ const Homepage = () => {
       </div>
 
      <hr className="my-8 border-t border-gray-600"/>
-
+     
     </div>
   );
 }
