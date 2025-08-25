@@ -48,10 +48,12 @@ const SearchBar = () => {
               placeholder="Search by name"
 
             />
-            <button className='search-bar' type='submit' >Search</button>
+          <div>
+          <button className='search-bar inline-block bg-red-500 text-white text-sm font-semibold py-3 px-6 rounded-full hover:bg-red-600 transition-colors duration-200 shadow-lg' type='submit' >Search</button>
+        </div>
           </form>
         </div>
-
+         
          <div className="mt-12">
                 {error && <p className="text-center text-red-500 text-xl">{error}</p>}
 

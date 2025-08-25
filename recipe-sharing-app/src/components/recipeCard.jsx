@@ -18,7 +18,6 @@ const RecipeCard = ({ meal }) => {
                 </p>
                 <a
                     href={meal.strSource || `https://www.themealdb.com/meal/${meal.idMeal}`}
-                    target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block bg-green-500 text-white text-sm font-semibold py-2 px-4 rounded-full hover:bg-green-600 transition-colors duration-200"
                 >

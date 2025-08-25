@@ -11,7 +11,7 @@ const Recipes = () => {
 
     const fetchRecipes = async () => {
         try {
-            const response = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood`)
+            const response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?f=a`)
             const data = await response.json();
             console.log(data)
         } catch (error) {
@@ -21,9 +21,7 @@ const Recipes = () => {
         }
     }
     return (
-        <div>
-           <div>Recipes</div>
-        </div>
+    <div>Recipes</div>
     );
 }
 
