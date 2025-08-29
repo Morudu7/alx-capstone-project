@@ -1,6 +1,6 @@
 import React from "react";
-import SearchBar from './SearchBar'
-import FavourateRecipes from './FavourateRecipes'
+import SearchBar from './SearchBar.jsx';
+import FavourateRecipes from './FavourateRecipes.jsx';
 import { Link } from "react-router-dom";
 
 const Homepage = () => {

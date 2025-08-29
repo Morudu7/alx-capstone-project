@@ -1,5 +1,5 @@
-import {useState, useEffect} from 'react'
-import RecipeCard from './recipeCard'
+import {useState, useEffect} from 'react';
+import RecipeCard from './recipeCard.jsx';
 
 const SearchBar = () => {
     const [recipes, setRecipes] = useState([])
@@ -45,7 +45,7 @@ const SearchBar = () => {
                type="text"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              placeholder="Search by name"
+              placeholder="Search by ingredient"
 
             />
           <div>

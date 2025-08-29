@@ -1,6 +1,6 @@
 import React from "react";
-import { useState, useEffect} from 'react'
-import RecipeCard from './recipeCard'
+import { useState, useEffect} from 'react';
+import RecipeCard from './recipeCard.jsx';
 
 
 const FavourateRecipes = () => {
