@@ -16,13 +16,13 @@ const RecipeCard = ({ meal }) => {
                 <p className="text-gray-600 text-sm mb-3">
                     <span className="font-semibold">Category:</span> {meal.strCategory}
                 </p>
-                <a
-                    href={meal.strSource || `https://www.themealdb.com/meal/${meal.idMeal}`}
-                    rel="noopener noreferrer"
+               
+               <Link
+                    to={`/recipe/${meal.idMeal}`}
                     className="inline-block bg-green-500 text-white text-sm font-semibold py-2 px-4 rounded-full hover:bg-green-600 transition-colors duration-200"
                 >
                     View Recipe
-                </a>
+              </Link>
             </div>
         </div>
     );
