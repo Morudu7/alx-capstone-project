@@ -3,28 +3,36 @@ import { useState } from "react";
 import { FaPhone} from 'react-icons/fa';
 import { MdEmail } from "react-icons/md";
 
-
 const Contacts = () => {
     const [formData, setFormData] = useState({message:'', name:'', email:''})
+     const [errors, setErrors] = useState({});
 
     const handleChange = (e) => {
        setFormData({ ...formData, [e.target.name]: e.target.value });
      };
 
+         // Function to validate the form data
+    const validateForm = () => {
+        const newErrors = {};
+        if (!formData.name.trim()) newErrors.name = "Name is required.";
+        if (!formData.email.trim()) newErrors.email = "Email is required.";
+        if (!formData.message.trim()) newErrors.message = "Message is required.";
+        
+        return newErrors;
+    }
+
      const handleSubmit = (e) => {
        e.preventDefault();
-       alert('Sent');
-     };
-
-  
-
+       alert('Sent')
+    }
+    
     return (
         <div className='justify-center'>
           <div>
             <h1 className='text-5xl p-6'>CONTACT US</h1>
           </div>
          
-         {/* Group of our contact details with icons */}
+         {/* Group of contact details with icons */}
          <div className='flex flex-col sm:flex-row gap-8 justify-center items-center pt-6'>
          <div className="flex items-center gap-2">
           <FaPhone size={25} color="#1DA1F2" />
@@ -52,6 +60,7 @@ const Contacts = () => {
                 onChange={handleChange}
                 className='bg-white flex justify-center items-center h-560 w-1/2 mx-auto pt-6 pr-4 pl-4 rounded-lg shadow-md w-full'
                 />
+                 {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
                 </div>
                  
                 <div className='justify-center p-10'>
@@ -63,6 +72,7 @@ const Contacts = () => {
                 onChange={handleChange}
                 className="w-1/2 mx-auto pt-6 pr-4 pl-4 rounded-lg shadow-md w-full"
                 />
+                 {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
                 </div>
                 
                 <div className='justify-center p-10'>
@@ -74,6 +84,7 @@ const Contacts = () => {
                 onChange={handleChange}
                 className="w-1/2 mx-auto pt-6 pr-4 pl-4 rounded-lg shadow-md w-full"
                  />
+                  {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
                  </div>
                 
                 <div>
