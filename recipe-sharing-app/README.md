@@ -1,12 +1,23 @@
-# React + Vite
+# Recipe Sharing App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
+This project showcases a recipe sharing application built with react js. The app uses data fetched from themealdb.
 
-Currently, two official plugins are available:
+## Features
+- The app utilizes routing for better userbility
+- Search bar ,to search for recipes
+- Displayed favourate recipes in the homepage
+- A recipe page where users can browse reripes from different countries
+- It also include a recipe details and recipecard to better manage data fetched from the API
+- A about us page
+- Finally it include a contact page wgere users can contact us or even write us a message or feedback.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Routes
+- /: Home
+- /Recipes
+- /About 
+- /contact
+-/recipedetails & recipecard
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Testing
+- Click through the links to ensure all routes and features are functional.
